@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: green;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+}
+
+.nav div a {
+    color: white;
+}
+
+.team {
+    display: flex;
+    gap: 2rem;
+    width: 100vw;
+    height: calc(100vh - 88.31px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.profileCard {
+    padding: 1rem;
+    background-color: green;
+    
+}
+
+.home {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 88.31px);
+    align-items: center;
+    justify-content: center;
+}
