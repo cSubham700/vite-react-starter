@@ -45,8 +45,10 @@
 
 .home {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: calc(100vh - 88.31px);
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
