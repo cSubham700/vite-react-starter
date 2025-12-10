@@ -5,6 +5,7 @@ import './styles/style.css'
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 import About from './About'
 import Home from './Home'
+import OurQuotes from './OurQuotes'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>} />
+        <Route path='/quotes' element={<OurQuotes/>} />
       </Routes>
       </BrowserRouter>
     </>
