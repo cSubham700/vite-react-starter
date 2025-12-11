@@ -13,18 +13,38 @@ const MyButton = ({onSmash, children}) => {
 }
 
 
+const MyCount = () => {
+
+
+  const [count, setCount] = useState(0);
+
+  
+
+  function handleClick() {
+
+   
+
+
+    setCount(count+1);
+    console.log(count);
+    
+  }
+
+
+  return (
+      <>
+       <h1>{count}</h1>
+       <button onClick={handleClick}>Click</button>
+      </>
+  )
+}
+
 
 
 
 const Home = () => {
 
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count+1);
-    console.log(count);
-    
-  }
+ 
 
 
 
@@ -35,8 +55,11 @@ const Home = () => {
    <div className='home'>
     
     <h1>Home Page</h1>
-    <h1>{count}</h1>
-    <button onClick={handleClick}>Click</button>
+
+    <MyCount/>
+
+    
+   
     <div className='home-button-div' onClick={()=>alert('Parent div clicked')}>
       
       <MyButton  onSmash={()=>alert('Uploading')}>Upload image</MyButton>

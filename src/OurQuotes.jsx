@@ -20,7 +20,7 @@ const OurQuotes = () => {
     <>
     <Nav/>
     <div className='quotes'>
-        <button onClick={handleClick}>Next</button>
+        <button onClick={handleClick} disabled={Index < 3 || Index === 3 ? false : true} >Next</button>
         <img src={quote.image} alt='' />
             <h3>{quote.title}</h3>
             <h4>{Index+1} of {quotes.length}</h4>

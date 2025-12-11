@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .nav {
     position: sticky;
     top: 0;
@@ -28,13 +30,19 @@
 
 .team {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     width: 100vw;
     height: calc(100vh - 88.31px);
-    display: flex;
+    
     align-items: center;
     justify-content: center;
     
+}
+
+.team > div {
+    display: flex;
+    gap: 1rem;
 }
 
 .profileCard {
@@ -75,4 +83,17 @@
     height: 400px;
     width: 400px;
     object-fit: contain;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact textarea {
+    font-size: larger;
+    padding: 0.5rem;
 }
