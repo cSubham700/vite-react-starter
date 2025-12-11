@@ -7,7 +7,7 @@ const OurQuotes = () => {
     const [Index, setIndex] = useState(0);
 
     function handleClick() {
-        setIndex(Index + 1)
+        setIndex(prev => prev + 1)
     }
 
 
