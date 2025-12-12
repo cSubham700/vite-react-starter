@@ -6,25 +6,78 @@ const Contact = () => {
   const [inSent, setIsSent] = useState(false);
   const [message, setMessage] = useState("Hi!");
 
+  const [person, setPerson] = useState({
+    firstName: "John",
+    lastName: "Doe",
+    email: "name@email",
+  });
+
   function sendMessage() {
     // random function
   }
 
+  function handleData(e) {
+    setPerson({
+      ...person,
+      [e.target.name]: e.target.value,
+    });
+  }
 
-  if (inSent) return <h3>{message}</h3>
+  if (inSent) return <h3>{message}</h3>;
 
   return (
-    <form onSubmit={(e)=>{
-      e.preventDefault();
-      setIsSent(true);
-      sendMessage(message);
-    }}>
-      <div className="contact">
-      <h2>Contat Us</h2>
-      <textarea placeholder="Message" value={message} onChange={e => setMessage(e.target.value)} />
-      <button type="submit">Send</button>
+    <>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setIsSent(true);
+          sendMessage(message);
+        }}
+      >
+        <div className="contact">
+          <h2>Contat Us</h2>
+          <textarea
+            placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <button type="submit">Send</button>
+        </div>
+      </form>
+
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <label>
+          First name:{" "}
+          <input
+            type="text"
+            value={person.firstName}
+            onChange={handleData}
+            name="firstName"
+          />
+        </label>
+        <label>
+          Last name:{" "}
+          <input
+            type="text"
+            value={person.lastName}
+            onChange={handleData}
+            name="lastName"
+          />
+        </label>
+        <label>
+          Email:{" "}
+          <input
+            type="text"
+            value={person.email}
+            onChange={handleData}
+            name="email"
+          />
+        </label>
+        <p>
+          {person.firstName} {""} {person.lastName} <br /> {person.email}
+        </p>
       </div>
-    </form>
+    </>
   );
 };
 
@@ -43,12 +96,9 @@ const About = () => {
     <>
       <Nav />
       <div className="team">
-
-        <div >
-        
-        {persons.map((person) => {
-          return (
-            
+        <div>
+          {persons.map((person) => {
+            return (
               <Profile
                 key={person.id}
                 imgSrc={person.imgSrc}
@@ -56,10 +106,8 @@ const About = () => {
                 role={person.role}
                 type={person.type}
               />
-            
-          );
-        })}
-
+            );
+          })}
         </div>
 
         <Contact />
