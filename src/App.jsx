@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-rou
 import About from './About'
 import Home from './Home'
 import OurQuotes from './OurQuotes'
+import Array from './Array'
+import Immer from './Immer'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +20,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>} />
         <Route path='/quotes' element={<OurQuotes/>} />
+        <Route path='/array' element={<Array/>} />
+        <Route path='/immer' element={<Immer/>} />
       </Routes>
       </BrowserRouter>
     </>

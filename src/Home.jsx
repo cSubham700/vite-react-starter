@@ -38,6 +38,30 @@ const MyCount = () => {
 };
 
 const Home = () => {
+
+
+      const [person, setPerson] = useState({
+        name: "Niki de Saint",
+        artwork: {
+          title: "Blue Nana",
+          city: "Hamburg",
+        },
+        
+      })
+
+      function handleChangeObject() {
+        setPerson({
+          ...person,
+          artwork:{
+            ...person.artwork,
+            city: "Kolkata"
+          }
+        })
+        console.log(person);
+        
+      }
+
+
   return (
     <>
       <Nav />
@@ -53,6 +77,10 @@ const Home = () => {
           <MyButton onSmash={() => alert("Uploading")}>Upload image</MyButton>
           <MyButton onSmash={() => alert("Playing")}>Play music</MyButton>
         </div>
+
+        <h3>{person.name} {""} {person.artwork.title} {""} {person.artwork.city}</h3>
+        <button onClick={handleChangeObject}>Change Object</button>
+
       </div>
     </>
   );
