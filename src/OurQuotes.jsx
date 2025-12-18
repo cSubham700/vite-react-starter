@@ -9,6 +9,10 @@ const OurQuotes = () => {
     setIndex(Index + 1);
   }
 
+  function handlePrev() {
+    setIndex(Index - 1);
+  }
+
   let quote = quotes[Index];
 
   return (
@@ -21,6 +25,10 @@ const OurQuotes = () => {
         >
           Next
         </button>
+        <button
+        onClick={handlePrev}
+        disabled={Index > 1 || Index === 1 ? false : true}
+        >Prev</button>
         <img src={quote.image} alt="" />
         <h3>{quote.title}</h3>
         <h4>

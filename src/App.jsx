@@ -8,6 +8,7 @@ import Home from './Home'
 import OurQuotes from './OurQuotes'
 import Array from './Array'
 import Immer from './Immer'
+import Form from './Form'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/quotes' element={<OurQuotes/>} />
         <Route path='/array' element={<Array/>} />
         <Route path='/immer' element={<Immer/>} />
+        <Route path='/form' element={<Form/>} />
       </Routes>
       </BrowserRouter>
     </>
