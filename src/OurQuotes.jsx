@@ -9,6 +9,8 @@ const OurQuotes = () => {
     setIndex(Index + 1);
   }
 
+ 
+
   let quote = quotes[Index];
 
   return (
@@ -21,6 +23,7 @@ const OurQuotes = () => {
         >
           Next
         </button>
+        
         <img src={quote.image} alt="" />
         <h3>{quote.title}</h3>
         <h4>

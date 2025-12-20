@@ -12,6 +12,8 @@ const Nav = () => {
             <Link to={'/quotes'}>Our Quotes</Link>
             <Link to={'/array'}>Array</Link>
             <Link to={'/immer'}>Immer</Link>
+            <Link to={'/form'}>Form</Link>
+            <Link to={'/task'}>Task</Link>
             
         </div>
     </div>
