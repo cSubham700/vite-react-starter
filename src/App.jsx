@@ -9,6 +9,7 @@ import OurQuotes from './OurQuotes'
 import Array from './Array'
 import Immer from './Immer'
 import Form from './Form'
+import Task from './Task'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/array' element={<Array/>} />
         <Route path='/immer' element={<Immer/>} />
         <Route path='/form' element={<Form/>} />
+        <Route path='/task' element={<Task/>} />
       </Routes>
       </BrowserRouter>
     </>

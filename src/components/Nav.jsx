@@ -13,6 +13,7 @@ const Nav = () => {
             <Link to={'/array'}>Array</Link>
             <Link to={'/immer'}>Immer</Link>
             <Link to={'/form'}>Form</Link>
+            <Link to={'/task'}>Task</Link>
             
         </div>
     </div>
