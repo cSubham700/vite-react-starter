@@ -14,6 +14,8 @@ const Nav = () => {
             <Link to={'/immer'}>Immer</Link>
             <Link to={'/form'}>Form</Link>
             <Link to={'/task'}>Task</Link>
+            <Link to={'/travelsnack'}>State Structure</Link>
+            <Link to={'/resetting'}>Preserving & Resetting</Link>
             
         </div>
     </div>

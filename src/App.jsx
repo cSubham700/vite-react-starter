@@ -10,6 +10,8 @@ import Array from './Array'
 import Immer from './Immer'
 import Form from './Form'
 import Task from './Task'
+import TravelSnack from './TravelSnack'
+import Resetting from './Resetting'
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path='/immer' element={<Immer/>} />
         <Route path='/form' element={<Form/>} />
         <Route path='/task' element={<Task/>} />
+        <Route path='/travelsnack' element={<TravelSnack/>} />
+        <Route path='/resetting' element={<Resetting/>} />
       </Routes>
       </BrowserRouter>
     </>

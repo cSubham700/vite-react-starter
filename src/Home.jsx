@@ -14,6 +14,20 @@ const MyButton = ({ onSmash, children }) => {
   );
 };
 
+const Button123 = ({ onSmash, children }) => {
+  return (
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        onSmash();
+      }}
+    >
+      {children}
+    </button>
+  );
+};
+
+
 const MyCount = () => {
   const [count, setCount] = useState(0);
 
@@ -38,6 +52,8 @@ const MyCount = () => {
 };
 
 const Home = () => {
+
+  const [increment, setIncrement] = useState(0);
 
 
       const [person, setPerson] = useState({
@@ -76,6 +92,8 @@ const Home = () => {
         >
           <MyButton onSmash={() => alert("Uploading")}>Upload image</MyButton>
           <MyButton onSmash={() => alert("Playing")}>Play music</MyButton>
+          <Button123 onSmash={() => setIncrement(prev => prev + 5)} >+5</Button123>
+          <p style={{color:'black'}}>{increment}</p>
         </div>
 
         <h3>{person.name} {""} {person.artwork.title} {""} {person.artwork.city}</h3>
