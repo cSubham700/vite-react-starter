@@ -12,6 +12,8 @@ import Form from './Form'
 import Task from './Task'
 import TravelSnack from './TravelSnack'
 import Resetting from './Resetting'
+import TaskApp from './ReducerList'
+import Context from './Context'
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path='/task' element={<Task/>} />
         <Route path='/travelsnack' element={<TravelSnack/>} />
         <Route path='/resetting' element={<Resetting/>} />
+        <Route path='/reducerlist' element={<TaskApp/>} />
+        <Route path='/usecontext' element={<Context/>} />
       </Routes>
       </BrowserRouter>
     </>
