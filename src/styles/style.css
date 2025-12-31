@@ -97,3 +97,29 @@
     font-size: larger;
     padding: 0.5rem;
 }
+
+.resetting-counter {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.resetting-counter-fancy {
+    border: 5px solid yellowgreen;
+    
+}
+
+.resetting-counter-fancy h1 {
+    color: green;
+}
+
+.context-section {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+  }
